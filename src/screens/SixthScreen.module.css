@@ -1,0 +1,379 @@
+.pageContainer {
+  width: 90%;
+  margin: 2% auto;
+  position: relative;
+  overflow: hidden;
+}
+
+/* שיניתי את position: fixed ל-absolute כדי למנוע חסימת אינטראקציות */
+.pageContainer {
+  width: 90%;
+  margin: 2% auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.treatmentsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 3rem;
+  position: relative;
+  z-index: 1; /* מוודא שהגריד מעל הרקע */
+  padding: 1rem;
+  direction: rtl;
+}
+
+.treatmentCard {
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(237, 58, 159, 0.1);
+  border-radius: 30px;
+  padding: 2.5rem;
+  box-shadow: 
+    0 10px 40px rgba(219, 39, 119, 0.07),
+    inset 0 0 80px rgba(255, 255, 255, 0.25);
+  transition: all 0.4s ease;
+  overflow: hidden;
+  position: relative;
+  z-index: 1; /* מוודא שהכרטיסים מעל הרקע */
+}
+
+.treatmentCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, 
+    rgba(237, 58, 159, 0.4), 
+    rgba(219, 39, 119, 0.4));
+  opacity: 0.5;
+}
+
+.treatmentCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 
+    0 15px 50px rgba(219, 39, 119, 0.1),
+    inset 0 0 100px rgba(255, 255, 255, 0.35);
+}
+
+.treatmentTitle {
+  font-family: Assistant;
+  font-weight: 700;
+  font-size: 2rem;
+  background: linear-gradient(90deg, 
+    rgba(219, 39, 119, 0.8), 
+    rgba(237, 58, 159, 0.8));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 1.5rem;
+  text-align: right;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.treatmentTitle::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, 
+    rgba(237, 58, 159, 0.3), 
+    rgba(219, 39, 119, 0.3));
+  border-radius: 2px;
+}
+
+.treatmentDescription {
+  font-family: AssistantR;
+  font-weight: 400;
+  font-size: 1.1rem;
+  color: rgba(219, 39, 119, 0.75);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  text-align: right;
+}
+
+.infoSection {
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 241, 248, 0.5));
+  border-radius: 20px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  border: 1px solid rgba(237, 58, 159, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.infoSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg,
+    rgba(237, 58, 159, 0.02),
+    rgba(219, 39, 119, 0.02));
+  pointer-events: none;
+}
+
+.infoTitle {
+  font-family: Assistant;
+  font-weight: 600;
+  font-size: 1.3rem;
+  color: rgba(219, 39, 119, 0.85);
+  margin-bottom: 1.25rem;
+  text-align: right;
+  position: relative;
+}
+
+.infoList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+.infoItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.infoItem:hover {
+  background: rgba(255, 255, 255, 0.6);
+  transform: translateX(5px);
+}
+
+.infoIcon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  color: rgba(237, 58, 159, 0.7);
+}
+
+.infoText {
+  font-family: AssistantR;
+  font-weight: 400;
+  color: rgba(219, 39, 119, 0.75);
+  text-align: right;
+  flex-grow: 1;
+}
+
+.highlightBox {
+  background: linear-gradient(135deg, 
+    rgba(237, 58, 159, 0.06),
+    rgba(219, 39, 119, 0.06));
+  border-radius: 20px;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  text-align: center;
+  border: 1px solid rgba(237, 58, 159, 0.1);
+  position: relative;
+  overflow: hidden;
+  direction: rtl;
+}
+
+.highlightTitle {
+  font-family: Assistant;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: rgba(219, 39, 119, 0.85);
+  margin-bottom: 0.75rem;
+  position: relative;
+}
+/* Media Queries */
+
+/* Media Queries */
+
+/* < 350px */
+@media (max-width: 349px) {
+  .pageContainer {
+    width: 98%;
+    margin: 1% auto;
+  }
+  
+  .treatmentsGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0;
+  }
+  
+  .treatmentCard {
+    padding: 1.25rem;
+    border-radius: 20px;
+  }
+  
+  .treatmentTitle {
+    font-size: 1.5rem;
+  }
+  
+  .treatmentDescription {
+    font-size: 1rem;
+  }
+  
+  .infoSection {
+    padding: 1rem;
+    margin: 1rem 0;
+  }
+}
+
+/* 350px - 450px */
+@media (min-width: 350px) and (max-width: 450px) {
+  .pageContainer {
+    width: 96%;
+  }
+  
+  .treatmentsGrid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 0;
+  }
+  
+  .treatmentCard {
+    padding: 1.5rem;
+  }
+  
+  .treatmentTitle {
+    font-size: 1.6rem;
+  }
+}
+
+/* 450px - 550px */
+@media (min-width: 451px) and (max-width: 550px) {
+  .pageContainer {
+    width: 95%;
+  }
+
+  .treatmentsGrid {
+    grid-template-columns: 1fr;
+    gap: 2.25rem;
+    padding: 0;
+  }
+  
+  .treatmentCard {
+    padding: 1.75rem;
+  }
+  
+  .treatmentTitle {
+    font-size: 1.7rem;
+  }
+}
+
+/* 550px - 650px */
+@media (min-width: 551px) and (max-width: 650px) {
+  .pageContainer {
+    width: 95%;
+  }
+
+  .treatmentsGrid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding: 0;
+  }
+  
+  .treatmentCard {
+    padding: 2rem;
+  }
+  
+  .treatmentTitle {
+    font-size: 1.8rem;
+  }
+}
+
+/* 650px - 750px */
+@media (min-width: 651px) and (max-width: 750px) {
+  .pageContainer {
+    width: 94%;
+  }
+
+  .treatmentsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding: 0;
+  }
+  
+  .treatmentCard {
+    padding: 2rem;
+  }
+}
+
+/* 750px - 850px */
+@media (min-width: 751px) and (max-width: 850px) {
+  .pageContainer {
+    width: 94%;
+  }
+
+  .treatmentsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.25rem;
+    padding: 0;
+  }
+  
+  .treatmentCard {
+    padding: 2.25rem;
+  }
+}
+
+/* 850px - 950px */
+@media (min-width: 851px) and (max-width: 950px) {
+  .pageContainer {
+    width: 93%;
+  }
+
+  .treatmentsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+    padding: 0;
+  }
+}
+
+/* 950px - 1050px */
+@media (min-width: 951px) and (max-width: 1050px) {
+  .pageContainer {
+    width: 93%;
+  }
+
+  .treatmentsGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 0;
+  }
+}
+
+/* 1050px - 1150px */
+@media (min-width: 1051px) and (max-width: 1150px) {
+  .pageContainer {
+    width: 92%;
+  }
+
+  .treatmentsGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.25rem;
+    padding: 0;
+  }
+}
+
+/* 1150px - 1250px */
+@media (min-width: 1151px) and (max-width: 1250px) {
+  .pageContainer {
+    width: 92%;
+  }
+
+  .treatmentsGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    padding: 0;
+  }
+}

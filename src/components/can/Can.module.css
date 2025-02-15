@@ -1,0 +1,64 @@
+.container {
+  display: flex;
+  align-items: center;
+  margin: 12px auto;
+  background: rgba(255, 248, 220, 0.15); /* גוון שמנת עדין */
+  padding: 0.15rem 0.5rem;
+  direction: rtl;
+  width: 320px;
+  height: 68px; /* הגדלתי את הגובה */
+  backdrop-filter: blur(25px);
+  border-radius: 15px;
+  box-shadow: 
+    0 8px 32px 0 rgba(218, 165, 32, 0.06), /* זהב עדין */
+    0 2px 8px 0 rgba(255, 223, 186, 0.12), /* פנינה */
+    inset 0 0 0 1px rgba(255, 248, 220, 0.7), /* שמנת */
+    0 4px 12px rgba(218, 165, 32, 0.04); /* זהב עדין */
+  transition: all 0.3s ease;
+ }
+ 
+ .container:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+    0 12px 45px 0 rgba(218, 165, 32, 0.08),
+    0 4px 12px 0 rgba(255, 223, 186, 0.15),
+    inset 0 0 0 1px rgba(255, 248, 220, 0.8),
+    inset 0 2px 4px 0 rgba(255, 248, 220, 0.7),
+    0 6px 18px rgba(218, 165, 32, 0.06);
+ }
+ 
+ .text {
+  font-family: 'AssistantR', sans-serif;
+  font-size: 1.15rem;
+  direction: rtl;
+  margin-right: 10px;
+  font-weight: 300;
+  width: 85%;
+ }
+ 
+ .icon {
+  width: 15%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+ 
+ @media (max-width: 350px) {
+  .container {
+    width: 270px;
+    height: 56px; /* הגדלתי את הגובה גם בגרסה המובייל */
+    padding: 0.15rem 0.35rem;
+  }
+ 
+  .text {
+    width: 100%;
+    font-size: 1rem;
+    margin-bottom: 0.4rem;
+  }
+ 
+  .icon {
+    width: 25%;
+    text-align: center;
+  }
+ }

@@ -1,0 +1,474 @@
+.wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  direction: rtl;
+}
+
+/* Luxury Card */
+.card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 
+    0 4px 6px -1px rgba(0, 0, 0, 0.05),
+    0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 0 0 1px rgba(0, 0, 0, 0.05);
+  position: relative;
+  isolation: isolate;
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Header Layout */
+.cardHeader {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  position: relative;
+  font-family: "Assistant";
+  cursor: pointer;
+}
+
+.headerContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.imageContainer {
+  width: 12rem;
+  height: 12rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.courseImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.expandButton {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(187, 47, 113, 0.05);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(187, 47, 113, 0.1);
+  margin-right: auto;
+}
+
+.expandButton:hover {
+  background: rgba(187, 47, 113, 0.1);
+  transform: rotate(180deg) scale(1.1);
+}
+
+.expandIcon {
+  color: #BB2F71;
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.expandIcon.expanded {
+  transform: rotate(45deg);
+}
+
+/* Typography */
+.courseTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0;
+  letter-spacing: -0.02em;
+  font-family: "Assistant";
+  line-height: 1.4;
+  background: linear-gradient(135deg, #BB2F71 0%, #D46DA7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: right;
+}
+
+.courseDescription {
+  font-family: 'AssistantR', sans-serif;
+  font-size: 1.125rem;
+  color: #4a5568;
+  margin: 0;
+  line-height: 1.6;
+  opacity: 0.9;
+  text-align: right;
+}
+
+/* Content Area */
+.cardContent {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cardContent.expanded {
+  max-height: none;
+  opacity: 1;
+  margin-top: 2rem;
+}
+
+/* Content Layout */
+.contentLayout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+/* Section Styling */
+.section {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: rgba(249, 250, 251, 0.8);
+  border-radius: 1rem;
+  border: 1px solid rgba(187, 47, 113, 0.1);
+}
+
+.sectionTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #BB2F71;
+  margin-bottom: 1.5rem;
+  font-family: "Assistant";
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-direction: row;
+}
+
+.sectionList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sectionItem {
+  font-weight: 400;
+  color: #374151;
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  font-family: 'AssistantR', sans-serif;
+  gap: 0.75rem;
+  transition: transform 0.8s ease;
+}
+
+.sectionItem:hover {
+  transform: translateX(-4px);
+}
+
+/* Icons */
+.titleIcon,
+.itemIcon {
+  color: #BB2F71;
+  flex-shrink: 0;
+}
+
+.sectionItem:hover .itemIcon {
+  transform: scale(1.2);
+}
+
+/* Details Section */
+.details {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(187, 47, 113, 0.1);
+}
+
+.detailItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #4b5563;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  transition: all 0.8s ease;
+}
+
+.detailItem:hover {
+  color: #BB2F71;
+  transform: translateX(-4px);
+}
+
+.detailIcon {
+  color: #BB2F71;
+  flex-shrink: 0;
+}
+
+/* Luxury Effects */
+.card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.4) 0%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  border-radius: inherit;
+  z-index: -1;
+  transition: opacity 0.8s ease;
+}
+
+.card::after {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  background: linear-gradient(
+    60deg,
+    rgba(187, 47, 113, 0.1),
+    rgba(212, 109, 167, 0.1),
+    rgba(228, 157, 193, 0.1)
+  );
+  border-radius: inherit;
+  z-index: -2;
+  animation: gradientMove 12s linear infinite;
+  background-size: 200% 200%;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+.card:hover::after {
+  opacity: 1;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Custom Scrollbar */
+.wrapper::-webkit-scrollbar {
+  width: 8px;
+}
+
+.wrapper::-webkit-scrollbar-track {
+  background: rgba(187, 47, 113, 0.05);
+  border-radius: 4px;
+}
+
+.wrapper::-webkit-scrollbar-thumb {
+  background: rgba(187, 47, 113, 0.2);
+  border-radius: 4px;
+  border: 2px solid rgba(187, 47, 113, 0.05);
+}
+
+.wrapper::-webkit-scrollbar-thumb:hover {
+  background: rgba(187, 47, 113, 0.3);
+}
+/* 1050-1150px */
+@media screen and (max-width: 1150px) {
+  .wrapper {
+      max-width: 1050px;
+  }
+  
+  .imageContainer {
+      width: 11rem;
+      height: 11rem;
+  }
+}
+
+/* 950-1050px */
+@media screen and (max-width: 1050px) {
+  .wrapper {
+      max-width: 950px;
+  }
+  
+  .card {
+      padding: 1.75rem;
+  }
+  
+  .imageContainer {
+      width: 10rem;
+      height: 10rem;
+  }
+}
+
+/* 850-950px */
+@media screen and (max-width: 950px) {
+  .wrapper {
+      max-width: 850px;
+  }
+  
+  .cardHeader {
+      gap: 1.5rem;
+  }
+  
+  .courseTitle {
+      font-size: 1.4rem;
+  }
+}
+
+/* 750-850px */
+@media screen and (max-width: 850px) {
+  .wrapper {
+      max-width: 750px;
+  }
+  
+  .card {
+      padding: 1.5rem;
+  }
+  
+  .imageContainer {
+      width: 9rem;
+      height: 9rem;
+  }
+  
+  .courseDescription {
+      font-size: 1rem;
+  }
+}
+
+/* 650-750px */
+@media screen and (max-width: 750px) {
+  .wrapper {
+      max-width: 650px;
+  }
+  
+  .headerContent {
+      flex: 1;
+  }
+  
+  .imageContainer {
+      width: 8rem;
+      height: 8rem;
+  }
+}
+
+/* 550-650px */
+@media screen and (max-width: 650px) {
+  .wrapper {
+      max-width: 550px;
+  }
+  
+  .card {
+      padding: 1.25rem;
+  }
+  
+  .courseTitle {
+      font-size: 1.3rem;
+  }
+  
+  .section {
+      padding: 1.25rem;
+  }
+
+  .imageContainer {
+      width: 7rem;
+      height: 7rem;
+  }
+}
+
+/* 450-550px */
+@media screen and (max-width: 550px) {
+  .wrapper {
+      max-width: 450px;
+  }
+  
+  .courseTitle {
+      font-size: 1.2rem;
+  }
+  
+  .sectionTitle {
+      font-size: 1.1rem;
+  }
+  
+  .sectionItem {
+      font-size: 1rem;
+  }
+
+  .imageContainer {
+      width: 6rem;
+      height: 6rem;
+  }
+}
+
+/* 350-450px */
+@media screen and (max-width: 450px) {
+  .wrapper {
+      max-width: 350px;
+  }
+  
+  .card {
+      padding: 1rem;
+  }
+  
+  .section {
+      padding: 1rem;
+  }
+  
+  .courseDescription {
+      font-size: 0.95rem;
+  }
+
+  .imageContainer {
+      width: 5.5rem;
+      height: 5.5rem;
+  }
+}
+
+/* Below 350px */
+@media screen and (max-width: 350px) {
+  .wrapper {
+      padding: 0.5rem;
+  }
+  
+  .card {
+      padding: 0.875rem;
+      margin-bottom: 1rem;
+  }
+  
+  .courseTitle {
+      font-size: 1.1rem;
+  }
+  
+  .courseDescription {
+      font-size: 0.9rem;
+  }
+  
+  .section {
+      padding: 0.875rem;
+      margin-bottom: 1rem;
+  }
+  
+  .sectionTitle {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+  }
+  
+  .sectionItem {
+      font-size: 0.9rem;
+      margin-bottom: 0.75rem;
+  }
+  
+  .expandButton {
+      width: 2rem;
+      height: 2rem;
+  }
+
+  .imageContainer {
+      width: 5rem;
+      height: 5rem;
+  }
+}

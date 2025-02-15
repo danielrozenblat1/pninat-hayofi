@@ -1,0 +1,188 @@
+.container {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+.description {
+    font-size: 1.2rem;
+    font-family: "AssistantR";
+    text-align: center;
+    margin: 1% auto;
+    direction: rtl;
+    font-weight: 300;
+    width: 90%;
+    color: black;
+}
+
+.imageContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    display: flex;
+}
+
+.backgroundImage {
+    flex: 1;
+    height: 100%;
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+
+.leftImage, .rightImage {
+    display: none;
+}
+
+.centerImage {
+    background-image: url('../images/פנינה\ גירד\ תדמית.png');
+}
+
+.contentBox {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    padding: 1rem;
+    width: 90%;
+    backdrop-filter: blur(5px);
+    background: rgba(0, 0, 0, 0.15);
+    border-radius: 15px;
+    z-index: 1;
+    bottom: 15%;
+    box-shadow: 
+        0 4px 30px rgba(0, 0, 0, 0.1),
+        inset 0 0 20px rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    animation: fadeIn 0.5s ease-out;
+}
+
+.logo {
+    width: auto;
+    max-width: 80%;
+    height: auto;
+margin:0 auto;
+    opacity: 0;
+    animation: logoFadeIn 0.8s ease-out forwards;
+}
+
+@keyframes logoFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, 20px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+}
+
+/* Media Queries */
+@media (max-width: 350px) {
+    .contentBox {
+        padding: 0.5rem;
+    }
+}
+
+@media (min-width: 350px) {
+    .contentBox {
+        padding: 0.7rem;
+    }
+}
+
+@media (min-width: 450px) {
+    .contentBox {
+        padding: 1.5rem;
+        width: 85%;
+    }
+}
+
+@media (min-width: 550px) {
+    .leftImage {
+        display: block;
+        background-image: url('../images/פנינת\ היופי\ תמונה\ שמאלית.png');
+    }
+    .rightImage {
+        display: block;
+        background-image: url('../images/פנינת\ היופי\ תמונה\ ימנית.png');
+    }
+    .contentBox {
+        padding: 1.8rem;
+        width: 80%;
+    }
+    .logo {
+        max-width: 75%;
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media (min-width: 650px) {
+    .contentBox {
+        padding: 2rem;
+        width: 75%;
+    }
+    .logo {
+        max-width: 70%;
+    }
+}
+
+@media (min-width: 750px) {
+    .contentBox {
+        width: 70%;
+    }
+    .logo {
+        max-width: 65%;
+    }
+}
+
+@media (min-width: 850px) {
+    .contentBox {
+        width: 65%;
+    }
+    .logo {
+        max-width: 60%;
+    }
+}
+
+@media (min-width: 950px) {
+    .contentBox {
+        width: 60%;
+    }
+    .logo {
+        max-width: 55%;
+    }
+}
+
+@media (min-width: 1050px) {
+    .contentBox {
+        width: 30%;
+    }
+    .logo {
+        max-width: 90%;
+    }
+}
+
+@media (min-width: 1150px) {
+    .logo {
+        max-width: 65%;
+        margin: 0 auto;
+    }
+}
