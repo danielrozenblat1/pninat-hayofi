@@ -10,7 +10,7 @@ return <>
 <div className={styles.title}>אני מאמינה בעבודה פרקטית</div>
 <div className={styles.description}>ואין תלמידה שיוצאת ממני בלי שהיא שולטת בתחום שהיא לומדת</div>
 <Works/>
-<div className={styles.description}>וככה התלמידות שלי מוציאות עבודות</div>
+<div className={styles.description} style={{fontFamily:"Assistant"}}>וככה התלמידות שלי מוציאות עבודות </div>
 <div className={styles.title}>עוד בזמן הקורס!</div>
 <StudentsWorks/>
 </>

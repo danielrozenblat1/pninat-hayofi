@@ -13,7 +13,6 @@ import {
   Timer,
   ThumbsUp,
   Gem,
-  Gift,
   Star
 } from 'lucide-react';
 
@@ -65,19 +64,14 @@ const Treatments = () => {
           icon: Timer
         },
         {
-          text: 'תהליך טיפול מהיר של כ-20 דקות',
+          text: 'תהליך טיפול מהיר של כ-10 דקות',
           icon: Clock
         },
         {
           text: 'מוצרים היפואלרגניים בלבד',
           icon: ThumbsUp
         }
-      ],
-      specialOffer: {
-        title: 'חבילה מיוחדת',
-        text: 'חבילת 10 טיפולים במחיר אטרקטיבי + מוצר הכנה מתנה',
-        icon: Gift
-      }
+      ]
     },
     {
       id: 2,
@@ -85,11 +79,11 @@ const Treatments = () => {
       description: 'טיפול מתקדם להסרת שיער בטכנולוגיית לייזר חדישה ובטוחה, המעניק תוצאות מדהימות לטווח ארוך',
       suitableFor: [
         {
-          text: 'מתאים לכל סוגי העור והשיער',
+          text: 'מתאים מגיל 9 ומעלה',
           icon: Users
         },
         {
-          text: 'למעוניינים בפתרון ארוך טווח',
+          text: 'לכל סוגי השיער חוץ משיער לבן',
           icon: Target
         },
         {
@@ -97,7 +91,7 @@ const Treatments = () => {
           icon: Shield
         },
         {
-          text: 'למחפשים טיפול יעיל וקבוע',
+          text: 'למי שסובלת מפיגמנטציה לאחר גילוח',
           icon: CheckCircle
         }
       ],
@@ -106,38 +100,34 @@ const Treatments = () => {
           text: 'הפחתה משמעותית בצמיחת השיער',
           icon: Sparkles
         },
-        {
-          text: 'טיפול מהיר ויעיל במיוחד',
-          icon: Zap
-        },
+     
         {
           text: 'תוצאות ארוכות טווח',
           icon: Timer
         },
         {
-          text: 'בטוח לשימוש בכל אזורי הגוף',
+          text: 'ידית קרח למניעת כאב',
           icon: Shield
+        },
+        {
+          text: 'תוצאות נראות לעין כבר מהטיפול הראשון',
+          icon: Star
         }
       ],
       additionalInfo: [
         {
-          text: 'טכנולוגיה מתקדמת ובטוחה',
+          text: 'יחס חם ואישי באווירה אינטימית',
           icon: Gem
         },
         {
-          text: 'מערכת קירור מובנית למניעת כאב',
+          text: 'מטפלת אחת בלבד שנוגעת בך',
           icon: Heart
         },
         {
-          text: 'מותאם אישית לכל מטופל',
+          text: 'תכנית מותאמת אישית',
           icon: Target
         }
-      ],
-      specialOffer: {
-        title: 'מבצע מיוחד',
-        text: 'חבילת 10 טיפולים + אזור קטן מתנה',
-        icon: Gift
-      }
+      ]
     }
   ];
 
@@ -166,16 +156,6 @@ const Treatments = () => {
             {renderInfoSection(treatment.suitableFor, 'למי מתאים הטיפול?')}
             {renderInfoSection(treatment.benefits, 'יתרונות הטיפול')}
             {renderInfoSection(treatment.additionalInfo, 'מידע נוסף')}
-            
-            <div className={styles.highlightBox}>
-              <h3 className={styles.highlightTitle}>
-                <treatment.specialOffer.icon className={styles.infoIcon} size={24} />
-                {treatment.specialOffer.title}
-              </h3>
-              <p className={styles.treatmentDescription}>
-                {treatment.specialOffer.text}
-              </p>
-            </div>
           </div>
         ))}
       </div>

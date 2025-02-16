@@ -1,22 +1,19 @@
 import styles from "./Recommends.module.css"
-import result1 from "../../images/פנינת היופי עבודות 1.png"
-import result2 from "../../images/פנינת היופי עבודות 2.png"
-import result3 from "../../images/פנינת היופי עבודות 3.png"
-import result4 from "../../images/פנינת היופי עבודות 4.png"
-import result5 from "../../images/פנינת היופי עבודות 5.png"
-import result6 from "../../images/פנינת היופי עבודות 6.png"
-import result7 from "../../images/פנינת היופי עבודות 7.png"
-
-import result9 from "../../images/פנינת היופי עבודות 9.png"
-import result10 from "../../images/פנינת היופי עבודות 10.png"
-import result11 from  "../../images/פנינת היופי עבודות 11.png"
+import result1 from "../../images/פנינת היופי לייזר המלצות 1.png"
+import result2 from "../../images/פנינת היופי לייזר המלצות 2.png"
+import result3 from "../../images/פנינת היופי לייזר המלצות 3.png"
+import result4 from "../../images/פנינת היופי לייזר המלצות 4.png"
+import result5 from "../../images/פנינת היופי לייזר המלצות 5.png"
+import result6 from "../../images/פנינת היופי לייזר המלצות 6.png"
+import result7 from "../../images/פנינת היופי לייזר המלצות 7.png"
+import result8 from "../../images/פנינת היופי לייזר המלצות 8.png"
 
 
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Button from "../WAbutton/Button"
-const Works=()=>{
+const LaserRec=()=>{
     const sliderSettings = {
      
         infinite: true,
@@ -37,22 +34,15 @@ const Works=()=>{
           type: 'image',
           src: result1,
         },
-        {
-          type: 'image',
-          src: result11,
-        },
+
       
     
  
-    
         {
           type: 'image',
-          src: result10,
+          src: result8,
         },
-        {
-          type: 'image',
-          src: result9,
-        },
+
         {
           type: 'image',
           src: result2,
@@ -80,13 +70,13 @@ const Works=()=>{
           },
         ];  
 return <>
-<div className={styles.title}>הנה חלק קטן מהעבודות שלי</div>
+<div className={styles.explain}>וזה מה שיש למטופלות שלנו להגיד!</div>
 <div className={styles.sliderContainer}>
         <Slider {...sliderSettings}>
           {content.map((item, index) => (
             <div key={index} itemscope itemtype="http://schema.org/Review">
               {item.type === 'image' && (
-                <img src={item.src} className={styles.image1} alt={`פנינת היופי לקוחה ממליצה מספר ${index + 1}`} itemprop="image"/>
+                <img src={item.src} className={styles.image1} alt={`פנינת היופי שיזוף בהתזה מספר ${index + 1}`} itemprop="image"/>
               )}
               {item.type === 'video' && (
                 <video
@@ -107,9 +97,9 @@ return <>
           ))}
         </Slider>
       </div>
-
+          <Button text="פנינה, בואי נתאם טיפול!"/>
 </>
 
 
 }
-export default Works
+export default LaserRec

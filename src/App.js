@@ -9,6 +9,7 @@ import FifthScreen from './screens/FifthScreen';
 import ByMe from './components/ByMe/ByMe';
 import Treatments from './screens/SixthScreen';
 import SeventhScreen from './screens/SeventhScreen';
+import EightScreen from './screens/EightScreen';
 
 function App() {
   return <>
@@ -19,6 +20,7 @@ function App() {
   <FifthScreen/>
   <BackgroundGlass/>
 <SeventhScreen/>
+<EightScreen/>
   <ByMe/>
   </>
 }

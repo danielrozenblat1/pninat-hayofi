@@ -4,6 +4,7 @@ import styles from "./SeventhScreen.module.css"
 import Treatments from "./SixthScreen"
 import Laser from "../components/recommends/Laser"
 import Hair from "../components/recommends/Hair"
+import LaserRec from "../components/recommends/RecommendsLaser"
 const SeventhScreen=()=>{
 
     return <>
@@ -13,6 +14,7 @@ const SeventhScreen=()=>{
 <div className={styles.title}>ואיך לא.. קצת דוגמאות!</div>
 <Laser/>
 <Hair/>
+<LaserRec/>
     </>
 }
 export default SeventhScreen

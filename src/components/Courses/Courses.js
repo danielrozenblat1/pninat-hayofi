@@ -23,7 +23,7 @@ const getIcon = (iconName) => {
 const courses = [
   {
     title: "הדבקת ריסים בשיטת Beauty Pearl",
-    description: "קורס בוטיק VIP אישי ומיוחד",
+    description: "2 מפגשים, 2 מודליסטיות",
     sections: [
       {
         title: "מה בקורס?",
@@ -90,7 +90,7 @@ const courses = [
   },
   {
     title: "קורס הרמת גבות + עיצוב גבות",
-    description: "קורס אישי אחת על אחת עיוני + מודליסטיות",
+    description: "מפגש אחד, 2 מודליסטיות",
     sections: [
       {
         title: "מה את לומדת?",
@@ -133,7 +133,7 @@ const courses = [
   },
   {
     title: "קורס עיצוב גבות טבעיות",
-    description: "קורס מקצועי לעיצוב גבות",
+    description: "3 מפגשים, 2 מודליסטיות",
     sections: [
       {
         title: "מה נלמד?",

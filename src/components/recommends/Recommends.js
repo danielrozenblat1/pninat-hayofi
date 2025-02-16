@@ -41,7 +41,19 @@ const Recommends=()=>{
       const content = [
         {
           type: 'image',
-          src: result1,
+          src: result18,
+        },
+        {
+          type: 'image',
+          src: result9,
+        },
+        {
+          type: 'image',
+          src: result17,
+        },
+        {
+          type: 'image',
+          src: result14,
         },
         {
           type: 'image',
@@ -57,20 +69,15 @@ const Recommends=()=>{
         },
         {
           type: 'image',
-          src: result14,
+          src: result1,
         },
+     
         {
           type: 'image',
           src: result16,
         },
-        {
-          type: 'image',
-          src: result17,
-        },
-        {
-          type: 'image',
-          src: result18,
-        },
+     
+      
         {
           type: 'image',
           src: result15,
@@ -83,10 +90,7 @@ const Recommends=()=>{
           type: 'image',
           src: result10,
         },
-        {
-          type: 'image',
-          src: result9,
-        },
+     
         {
           type: 'image',
           src: result2,
