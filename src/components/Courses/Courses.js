@@ -133,7 +133,7 @@ const courses = [
   },
   {
     title: "קורס עיצוב גבות טבעיות",
-    description: "3 מפגשים, 2 מודליסטיות",
+    description: "2 מפגשים, 3 מודליסטיות",
     sections: [
       {
         title: "מה נלמד?",
