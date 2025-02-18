@@ -1,0 +1,45 @@
+.card {
+    width: 300px;
+    height: 200px;
+    background-color: white;
+    margin:2% auto;
+    direction: rtl;
+    border-radius: 0.5rem;
+    box-shadow: 
+        /* צל פנימי עם מעברי צבעים */
+        inset 0 0 20px rgba(255, 20, 147, 0.1),     /* ורוד עדין מאוד */
+        inset 0 0 30px rgba(147, 51, 234, 0.05),    /* סגול עדין */
+        inset 0 0 40px rgba(219, 39, 119, 0.03),    /* ורוד-אדום עדין */
+        /* צל חיצוני קל */
+        0 2px 4px rgba(0, 0, 0, 0.05);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+  .icon {
+    width: 2rem;
+    height: 2rem;
+    color: #FF1493; /* fuchsia-600 equivalent */
+  }
+  
+  .textContainer {
+    text-align: center;
+  }
+  
+  .address {
+    color: #FF1493;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .hours {
+    color: #FF1493;
+  }
+  
+  .welcome {
+    color: #FF1493;
+    margin-top: 0.5rem;
+  }

@@ -10,6 +10,7 @@ import ByMe from './components/ByMe/ByMe';
 import Treatments from './screens/SixthScreen';
 import SeventhScreen from './screens/SeventhScreen';
 import EightScreen from './screens/EightScreen';
+import LocationCard from './components/bonus/Bonus';
 
 function App() {
   return <>
@@ -21,6 +22,7 @@ function App() {
   <BackgroundGlass/>
 <SeventhScreen/>
 <EightScreen/>
+<LocationCard/>
   <ByMe/>
   </>
 }
