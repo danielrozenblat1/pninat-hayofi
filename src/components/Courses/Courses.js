@@ -262,7 +262,7 @@ const CourseCard = ({ course }) => {
             ))}
           </div>
         </div>
-        <Button text="אני רוצה לשמוע עוד" message={`היי פנינה הגעתי מהדף, אשמח לעוד עוד על ${course.title}`}/>
+        <Button text="אני רוצה לשמוע עוד" message={`היי פנינה הגעתי מהדף, אשמח לשמוע עוד על ${course.title}`}/>
         </div>
       </div>
     
